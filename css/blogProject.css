@@ -1,0 +1,262 @@
+
+@import url(../css/fonts.css);
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    /* overflow: auto;   */
+}
+
+:root{
+
+    /* Theme Colors */
+    --first: "green"
+    --second: "green"
+    --third: "black"
+    --fourth: "white"
+    --fifth: "purple"
+
+    /* Theme font-family */
+    --Lobster:"Lobster", cursive 
+    --Kolker_Brush:"Kolker_Brush", cursive;
+    --Pacifico:"Pacifico", cursive;
+    --Caveat:"Caveat", cursive;
+    --Courgette:"Courgette", cursive;
+
+    /* Gradient Color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+
+/* ---------- Global Declaration  ---------- */
+a{
+    text-decoration: none;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--first);
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--first);
+}
+
+h3{
+    font-family: var(--Courgette);
+    font-size: 1.3rem;
+}
+
+.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Pacifico);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: transparent;
+    border: 1px solid green;
+}
+
+span{
+    font-family: var(--Courgette);
+}
+
+img:hover{
+    transform: scale(1.1);
+    transition: transform .2s;
+    border-radius: .5cm;
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+/* -----x----- Global Declaration -----x---- */
+
+/* ------ navbar ------- */
+
+.navArea{
+    background-color: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav-menu{
+    justify-content: space-between;
+}
+
+.toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.collapse{
+    height: 100vh;
+}
+
+.toggle-icons i{
+    font-size: 1.4rem;
+    color: black;
+}
+
+.nav-items{
+    display: flex;
+    margin: 0;
+    font-family: Pacifico; 
+    
+}
+
+.nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    
+}
+
+.nav-link:hover{
+    background-color: #a1c4fd;
+}
+
+.social{
+    padding: 1.4rem 0;
+}
+
+.social i{
+    padding: 0 .2rem;
+}
+.social i:hover{
+    background-color: #0e1c22;
+}
+
+.text-gray{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: Lobster;
+    color: var(--first);
+}
+
+/* --x--- navbar ---x--- */
+
+/*--------------- Main Content ---------------*/
+
+/*---------- Blog Carousel ----------*/
+
+main .blog{
+    background-image: url("../assets/Abract01.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+
+.blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(241, 56, 10, 0.863);
+}
+
+.blog-title{
+    padding: 2rem 0;
+}
+
+.btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+span{
+    display: block;
+}
+
+/*-----x---- Blog Carousel ----x-----*/
+
+/*------------- Site Content -------------*/
+
+.site-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+}
+
+/*------x------ Site Content ------x------*/
+
+/*--------------- Site Title ---------------*/
+.site-title{
+    background-image: url(../assets/Background-image.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+h1{
+    margin: .3rem;
+}
+h3{
+    margin: .3rem;
+}
+
+.btn{
+    margin: 1.8rem;
+    background: #6862a1;
+}
+
+/*------x-------- Site Title -------x-------*/
+
+/*-------x------- Main Content --------x------*/
+
+/*   Viewport less than or equal to 750px   */
+
+@media screen and (max-width:750px) {
+    .nav-menu, .nav-items{
+        flex-direction: column;
+    }
+    .toggle-collapse{
+        display: initial;
+    }
+}
+
+/* x  Viewport less than or equal to 750px x  */
+
